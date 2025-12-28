@@ -58,8 +58,9 @@ const Hero = () => {
 
   const currentVisual = projectVisuals[currentIndex];
 
-  // --- REFACTOR: TAB MENÜSÜNÜ TEK BİR DEĞİŞKENE ALDIK ---
-  // Böylece hem solda hem de sağda (telefon üstünde) aynısını kullanabiliriz.
+  // E-posta konu başlığını dile göre ayarla
+  const mailSubject = lang === 'en' ? "Test Phase Participation" : "Test Aşamasına Katılım";
+
   const tabMenu = (
     <div className="w-full max-w-[500px] bg-gray-100 rounded-full p-1 flex relative overflow-hidden shadow-sm">
       {/* Dolan Bar */}
@@ -109,7 +110,7 @@ const Hero = () => {
         onMouseLeave={() => setIsPaused(false)}
       >
 
-        {/* 1. TAB MENÜSÜ (ORİJİNAL - Masaüstünde görünür, Mobilde de görünür (istediğin gibi 2 tane olacak)) */}
+        {/* 1. TAB MENÜSÜ */}
         <div className="mb-8 w-full">
           {tabMenu}
         </div>
@@ -122,29 +123,28 @@ const Hero = () => {
 
         {/* AÇIKLAMA */}
         <div className="mb-8">
-          {/* animate-fade-in ekledik ki yazı değişirken yumuşak geçiş yapsın */}
-          {/* key={currentIndex} ekledik ki React içeriğin değiştiğini anlayıp animasyonu tekrar tetiklesin */}
           <p
             key={currentIndex}
             className="text-lg text-gray-600 leading-relaxed animate-fade-in"
           >
-            {/* ARTIK BURASI DİNAMİK: Seçili projenin mainDescription'ını çekiyor */}
             {t.projects[currentIndex].mainDescription}
           </p>
         </div>
 
-        {/* BUTON */}
-        <button className="bg-[#171717] text-white px-8 py-4 rounded-xl font-medium text-lg hover:bg-black hover:scale-105 transition-all shadow-lg">
+        {/* GÜNCELLENEN BUTON (mailto linki) */}
+        <a 
+          href={`mailto:info@civilex.ai?subject=${encodeURIComponent(mailSubject)}`}
+          className="bg-[#171717] text-white px-8 py-4 rounded-xl font-medium text-lg hover:bg-black hover:scale-105 transition-all shadow-lg inline-block text-center"
+        >
           {t.cta}
-        </button>
+        </a>
 
       </div>
 
       {/* --- SAĞ TARAF --- */}
-      {/* PB-300px EKLEMESİ: Mobilde aşağıya 300px pay bıraktık */}
       <div className="flex-1 flex flex-col w-full relative mt-12 md:mt-8 pb-[100px] md:pb-0">
 
-        {/* 2. TAB MENÜSÜ (YENİ - Sadece Mobilde Görünür, Telefonun Üstünde) */}
+        {/* 2. TAB MENÜSÜ (Mobil) */}
         <div className="block md:hidden w-full mb-8 z-30">
           {tabMenu}
         </div>
