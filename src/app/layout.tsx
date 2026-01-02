@@ -7,7 +7,7 @@ import { LanguageProvider } from "@/context/LanguageContext"; // Import ettik
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Civilex.AI Landing Page",
+  title: "Civilex.AI - AI In Everyday Life",
   description: "AI R&D in Action",
 };
 
