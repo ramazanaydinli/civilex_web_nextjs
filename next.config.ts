@@ -1,14 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Statik HTML çıktısı için
+  output: 'export', 
   images: {
-    unoptimized: true, // GitHub Pages'da resim optimizasyonu için
+    unoptimized: true, 
   },
-  // GitHub Repo adınız buraya ekleniyor:
-  basePath: '/civilex_web_nextjs',
-  
-  // Asset'lerin (CSS, JS) doğru yoldan yüklenmesi için:
-  assetPrefix: '/civilex_web_nextjs',
+  // basePath ve assetPrefix SATIRLARI SİLİNDİ.
 };
 
 export default nextConfig;

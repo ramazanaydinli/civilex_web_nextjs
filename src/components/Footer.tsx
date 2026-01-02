@@ -115,7 +115,7 @@ const Footer = () => {
           <div className="hidden md:block w-1/4 relative h-[250px] mt-10">
              <div className="absolute right-[-20px] top-[-30px] w-[300px] h-[250px]">
                 <Image
-                   src="/contact_us.png"
+                   src="/images/contact_us.png"
                    alt="Contact Illustration"
                    fill
                    className="object-contain"
