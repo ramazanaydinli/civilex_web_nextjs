@@ -1,27 +1,26 @@
-// src/app/pentathlon/privacy-policy/page.tsx
+// src/app/privacy-policy/pentathlon-exercise-tracker/page.tsx
 "use client";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
-import { privacyContent } from "@/content/privacy"; // Mevcut içerik dosyasını kullanıyoruz
+import { pentathlonPrivacyContent } from "@/content/privacy"; 
 import ReactMarkdown from 'react-markdown';
 
 export default function PentathlonPrivacyPolicy() {
   const { lang } = useLanguage();
-  const t = privacyContent[lang];
+  // Burada Pentathlon içeriğini çekiyoruz
+  const t = pentathlonPrivacyContent[lang];
 
   return (
-    <div className="min-h-screen bg-white text-black selection:bg-[#B9FF66] selection:text-black overflow-x-hidden">
+    <div className="min-h-screen bg-white text-black selection:bg-[#B9FF66] selection:text-black overflow-x-hidden flex flex-col">
       <Navbar />
 
-      <main className="relative z-10 max-w-[1000px] mx-auto px-6 pt-12 md:pt-20 pb-20">
+      <main className="flex-grow relative z-10 max-w-[1000px] w-full mx-auto px-6 pt-12 md:pt-20 pb-20">
         
         <div className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-black">
                 {t.title}
-                {/* İsterseniz başlığa özel ekleme yapabilirsiniz */}
-                <span className="block text-2xl text-gray-500 mt-2 font-normal">Pentathlon Exercise Tracker</span>
             </h1>
             <p className="text-gray-500 font-medium text-lg">
                 {t.lastUpdated}

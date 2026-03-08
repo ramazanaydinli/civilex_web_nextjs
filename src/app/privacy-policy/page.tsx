@@ -1,70 +1,79 @@
+// src/app/privacy-policy/page.tsx
 "use client";
 
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
-import { privacyContent } from "@/content/privacy";
-import ReactMarkdown from 'react-markdown';
+import { privacyHubContent } from "@/content/privacy"; 
 
-export default function PrivacyPolicy() {
+export default function PrivacyPolicyHub() {
   const { lang } = useLanguage();
-  const t = privacyContent[lang];
+  const t = privacyHubContent[lang];
 
   return (
-    // overflow-x-hidden ekledik ki sağdan soldan taşan "hayalet çizgiler" olmasın
-    <div className="min-h-screen bg-white text-black selection:bg-[#B9FF66] selection:text-black overflow-x-hidden">
-      
-      {/* Navbar */}
+    <div className="min-h-screen bg-white text-black selection:bg-[#B9FF66] selection:text-black overflow-x-hidden flex flex-col">
       <Navbar />
 
-      {/* Main'e relative ve z-10 ekledik, böylece alttan/üstten sızan çizgilerin üstünde durur */}
-      <main className="relative z-10 max-w-[1000px] mx-auto px-6 pt-12 md:pt-20 pb-20">
+      <main className="flex-grow relative z-10 max-w-[1000px] w-full mx-auto px-6 pt-12 md:pt-20 pb-20">
         
         {/* Başlık Bölümü */}
-        <div className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-black">
+        <div className="mb-16 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-[#191A23]">
                 {t.title}
             </h1>
-            <p className="text-gray-500 font-medium text-lg">
-                {t.lastUpdated}
+            <p className="text-gray-500 font-medium text-lg max-w-2xl mx-auto leading-relaxed">
+                {t.description}
             </p>
-            {/* O "kıl" gibi durabilecek <hr> çizgisini tamamen kaldırdım */}
         </div>
 
-        {/* Giriş Metni */}
-        <div className="text-lg md:text-xl leading-relaxed text-gray-800 mb-12 font-medium">
-            {t.intro}
-        </div>
-
-        {/* Maddeler */}
-        <div className="space-y-10">
-            {t.sections.map((section, index) => (
-                <section key={index} className="bg-gray-50 p-6 md:p-10 rounded-[20px] border border-gray-100 shadow-sm">
-                    <h2 className="text-2xl font-bold mb-6 text-black">
-                        {section.heading}
-                    </h2>
+        {/* Uygulama Kartları Grid'i */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {t.apps.map((app) => (
+                <Link 
+                    href={app.href} 
+                    key={app.id}
+                    className="group block relative bg-white border border-gray-200 rounded-[2rem] p-8 md:p-10 transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
+                >
+                    {/* Arka plan vurgu rengi (Hover olunca hafifçe belirir) */}
+                    <div className={`absolute top-0 right-0 w-32 h-32 rounded-bl-full opacity-5 group-hover:opacity-10 transition-opacity ${app.color}`}></div>
                     
-                    {/* React Markdown Entegrasyonu */}
-                    <div className="text-gray-700 leading-relaxed">
-                        <ReactMarkdown
-                            components={{
-                                strong: ({node, ...props}) => <span className="font-bold text-black" {...props} />,
-                                p: ({node, ...props}) => <p className="mb-4 last:mb-0" {...props} />,
-                                ul: ({node, ...props}) => <ul className="list-disc pl-5 mb-4 space-y-2" {...props} />,
-                                li: ({node, ...props}) => <li className="" {...props} />,
-                                a: ({node, ...props}) => <a className="text-blue-600 hover:underline" {...props} />
-                            }}
-                        >
-                            {section.content}
-                        </ReactMarkdown>
+                    {/* Kart İçeriği */}
+                    <div className="relative z-10">
+                        <div className={`w-12 h-2 rounded-full mb-6 ${app.color}`}></div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#191A23] mb-4 group-hover:text-blue-600 transition-colors">
+                            {app.name}
+                        </h2>
+                        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                            {app.desc}
+                        </p>
+                        
+                        {/* Ok İkonu */}
+                        <div className="flex items-center text-[#191A23] font-medium group-hover:text-blue-600 transition-colors">
+                            <span className="mr-2">{lang === 'tr' ? 'Metinleri Oku' : 'Read Agreements'}</span>
+                            <svg 
+                                xmlns="http://www.w3.org/2000/svg" 
+                                width="20" 
+                                height="20" 
+                                viewBox="0 0 24 24" 
+                                fill="none" 
+                                stroke="currentColor" 
+                                strokeWidth="2" 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round"
+                                className="transform group-hover:translate-x-2 transition-transform"
+                            >
+                                <path d="M5 12h14"></path>
+                                <path d="m12 5 7 7-7 7"></path>
+                            </svg>
+                        </div>
                     </div>
-                </section>
+                </Link>
             ))}
         </div>
 
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
