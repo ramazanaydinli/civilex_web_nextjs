@@ -94,11 +94,15 @@ export const pilatesPrivacyContent = {
         content: "**1. Processed Data**\n* **Identity & Contact:** Name, email, password (if registered).\n* **Special Category Data (Image Data):** Instant image data obtained via your camera during posture analysis.\n\n**2. Purpose of Processing**\nPerforming AI-based posture analysis, ensuring movement accuracy, providing corrective feedback, and managing your user account.\n\n**3. Data Transfer & On-Device Processing**\nImage data is processed **ONLY** on your device. It is **NEVER** saved to servers, stored, or shared with third parties. It is permanently deleted instantly after analysis.\n\n**4. Your Rights**\nYou have the right to request information about your data, correction, deletion, and object to processing."
       },
       {
-        heading: "3. Explicit Consent for Camera Usage",
+        heading: "3. Data Deletion and Account Termination",
+        content: "Users have full control over their personal data and accounts:\n\n* **Data Deletion:** You can delete your exercise history and statistics (repetition counts, accuracy rates) through the 'Delete My Data' button in the Profile section of the app.\n* **Account Termination:** You can permanently delete your account and all associated personal information (email, name) via the 'Delete My Account' button in the Profile section. This action is irreversible.\n* **Request via Email:** You may also request the deletion of your account and data by emailing us at info@civilex.ai."
+      },
+      {
+        heading: "4. Explicit Consent for Camera Usage",
         content: "By using the application, I declare that I have read and understood the Privacy Policy. Within the scope of Personal Data Protection Laws, I EXPLICITLY CONSENT to the processing of my instant image data obtained via my mobile device's camera, limited ONLY to performing posture analysis and providing feedback during Pilates exercises.\n\nI understand and agree that this processing will be performed exclusively on my device (on-device), and my data will NOT be saved to Company servers, stored, or transferred to third parties."
       },
       {
-        heading: "4. Contact Us",
+        heading: "5. Contact Us",
         content: "For any questions regarding these agreements, our privacy practices, or your personal data, please contact us:\n\n**Email:** info@civilex.ai\n\n**Phone:** +90 532 413 06 94\n\n**Address:** ODTÜ Teknokent Etkim Building, Üniversiteler, 06800 Çankaya/Ankara, Turkey"
       }
     ]
@@ -117,17 +121,20 @@ export const pilatesPrivacyContent = {
         content: "**1. İşlenen Kişisel Verileriniz**\n* **Kimlik ve İletişim:** Ad, soyad, e-posta, şifre (kayıt olunması halinde).\n* **Özel Nitelikli Kişisel Veriniz (Görüntü Verisi):** Mobil cihazınızın kamerası aracılığıyla anlık olarak elde edilen görüntü veriniz.\n\n**2. İşlenme Amaçları**\nYapay zeka tabanlı postür analizinin gerçekleştirilmesi, hareket doğruluğunun analizi ve hesap yönetimi.\n\n**3. Verilerin Aktarılması ve Yerel İşleme (On-Device)**\nGörüntü verileriniz **YALNIZCA** cihazınızın işlemcisinde (on-device) anlık işlenir. Sunuculara **KAYDEDİLMEZ, DEPOLANMAZ** ve üçüncü taraflarla **PAYLAŞILMAZ.** Analiz tamamlandığı an cihaz üzerinde derhal silinir.\n\n**4. İlgili Kişi Hakları (Madde 11)**\nKVKK Madde 11 uyarınca kişisel verilerinizle ilgili bilgi talep etme, düzeltme veya silme gibi haklara sahipsiniz."
       },
       {
-        heading: "3. Kamera Kullanımı İçin Açık Rıza Metni",
+        heading: "3. Veri ve Hesap Silme Hakkı",
+        content: "Kullanıcılar, verileri ve hesapları üzerinde tam kontrol hakkına sahiptir:\n\n* **Veri Silme:** Uygulama içerisindeki Profil sayfasında bulunan 'Verilerimi Sil' butonu ile egzersiz geçmişinizi ve istatistiklerinizi (tekrar sayıları, doğruluk oranları vb.) dilediğiniz zaman silebilirsiniz.\n* **Hesap Silme:** Profil sayfasındaki 'Hesabımı Sil' butonu aracılığıyla hesabınızı ve bağlı tüm kişisel bilgilerinizi (e-posta, ad-soyad) kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz.\n* **Talep Üzerine Silme:** Ayrıca, hesap ve verilerinizin silinmesi talebinizi info@civilex.ai adresine e-posta göndererek bize iletebilirsiniz."
+      },
+      {
+        heading: "4. Kamera Kullanımı İçin Açık Rıza Metni",
         content: "KVKK Aydınlatma Metni'ni okuduğumu ve anladığımı beyan ederim.\n\nBu kapsamda, özel nitelikli kişisel veri kategorisinde yer alan mobil cihazımın kamerası aracılığıyla elde edilecek anlık görüntü verilerimin; YALNIZCA postür analizinin yapılması ve egzersiz sırasında geri bildirim verilmesi amacıyla sınırlı olarak işlenmesini;\n\nBu işlemenin yalnızca cihaz üzerinde (on-device) gerçekleştirileceğini, verilerimin Şirket sunucularına kaydedilmeyeceğini, depolanmayacağını veya üçüncü taraflara aktarılmayacağını anlayarak, hiçbir baskı altında kalmaksızın hür irademle **AÇIK RIZA GÖSTERİYORUM.**"
       },
       {
-        heading: "4. İletişim",
+        heading: "5. İletişim",
         content: "Kullanıcı Sözleşmesi, kişisel verilerinizin işlenmesi veya uygulamayla ilgili her türlü soru ve talebiniz için aşağıda belirtilen kanallar aracılığıyla bize ulaşabilirsiniz:\n\n**E-posta:** info@civilex.ai\n\n**Telefon:** +90 532 413 06 94\n\n**Adres:** ODTÜ Teknokent Etkim Binası, Üniversiteler, 06800 Çankaya/Ankara, Türkiye"
       }
     ]
   }
 };
-
 // ==========================================
 // 3. PRIVACY POLICY ANA SAYFA (HUB) İÇERİĞİ
 // ==========================================
