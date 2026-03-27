@@ -266,6 +266,50 @@ export default function ProjectsPage() {
              </div>
           </div>
         </section>
+        {/* --- PROJE 4: ATİK (K-12 Gelişim Takibi) --- */}
+        <section className="py-24 px-6 relative" id="atik">
+          <div className="max-w-[1400px] mx-auto">
+            
+            {/* Section Header */}
+            <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16 border-b border-gray-200 pb-8">
+              <div>
+                <span className="text-[#10B981] font-bold tracking-widest uppercase text-sm mb-2 block">K-12 Education</span>
+                <h2 className="text-4xl md:text-6xl font-medium tracking-tight">{t.atik.title}</h2>
+              </div>
+              <p className="text-lg md:text-xl text-gray-600 max-w-xl text-right md:text-right">
+                {t.atik.description}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+              
+              {/* Sol Taraf: Özellik Kartları (Daha fazla alan kaplasın diye col-span-7 yaptık) */}
+              <div className="lg:col-span-7 grid grid-cols-1 gap-6">
+                 {t.atik.cards.map((card: any, idx: number) => (
+                    <ModernCard 
+                      key={idx}
+                      index={idx}
+                      title={card.title}
+                      text={card.text}
+                      variant={card.variant}
+                    />
+                 ))}
+              </div>
+
+              {/* Sağ Taraf: Dekoratif Alan veya Görsel */}
+              <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
+                <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
+                   {/* Buraya Atik için özel bir illüstrasyon veya görsel gelene kadar placeholder gibi bir glow ekleyebilirsin */}
+                   <div className="absolute inset-0 bg-gradient-to-tr from-[#10B981]/20 to-transparent blur-3xl rounded-full animate-pulse"></div>
+                   <div className="relative z-10 w-full h-full flex items-center justify-center">
+                      <span className="text-8xl font-bold text-[#10B981]/20">ATİK</span>
+                   </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
 
       </main>
 

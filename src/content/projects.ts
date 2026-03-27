@@ -11,17 +11,17 @@ export const projectsContent = {
         {
           title: "AI-Powered Form & Posture Correction",
           text: "Using your phone's camera, PilAltes becomes your virtual spotter. Our intelligent AI analyzes your dynamic movements in real-time. If it detects a mistake in your posture or form, it provides immediate, corrective audio cues.",
-          variant: "dark" // Koyu kart
+          variant: "dark"
         },
         {
           title: "Truly Personalized Workout Programs",
           text: "PilAltes is your personal trainer that learns and adapts to you. Based on your progress, goals, and performance, the app designs a unique workout plan tailored just for you.",
-          variant: "blue" // Mavi kart
+          variant: "blue"
         },
         {
           title: "Uncompromising On-Device Privacy",
           text: "Your privacy is our foundation. All AI processing and motion analysis happen directly on your phone. No sensitive video of you or your home is ever recorded or uploaded to a server.",
-          variant: "light" // Açık kart
+          variant: "light"
         }
       ]
     },
@@ -74,6 +74,27 @@ export const projectsContent = {
         {
           title: "Prevent Accidents Before They Happen",
           text: "By providing this crucial, real-time oversight, we empower your team to take proactive measures, enforce safety protocols, and ultimately save lives.",
+          variant: "light"
+        }
+      ]
+    },
+    atik: {
+      title: "Atik: K-12 Physical Development",
+      description: "A comprehensive ecosystem that analyzes students' sports performance with AI and reports their progress in real-time.",
+      cards: [
+        {
+          title: "Precise Motion Tracking",
+          text: "Students' exercise forms are analyzed instantly through the camera to ensure safety and efficiency.",
+          variant: "dark"
+        },
+        {
+          title: "Progress Reporting",
+          text: "Student's progress charts are automatically generated on a weekly and monthly basis for teachers and parents.",
+          variant: "blue"
+        },
+        {
+          title: "On-Device Privacy",
+          text: "All analysis is done locally on the device, ensuring maximum privacy for students and educational institutions.",
           variant: "light"
         }
       ]
@@ -154,6 +175,27 @@ export const projectsContent = {
         {
           title: "Kazaları Olmadan Önleyin",
           text: "Bu kritik, gerçek zamanlı gözetimi sağlayarak ekibinizin proaktif önlemler almasını ve hayat kurtarmasını sağlıyoruz.",
+          variant: "light"
+        }
+      ]
+    },
+    atik: {
+      title: "Atik: K-12 Fiziksel Gelişim",
+      description: "Öğrencilerin spor performansını yapay zeka ile analiz eden ve gelişimlerini gerçek zamanlı olarak raporlayan kapsamlı bir ekosistem.",
+      cards: [
+        {
+          title: "Hassas Hareket Takibi",
+          text: "Öğrencilerin egzersiz formları, güvenlik ve verimliliği sağlamak için kamera aracılığıyla anlık olarak analiz edilir.",
+          variant: "dark"
+        },
+        {
+          title: "Gelişim Raporlaması",
+          text: "Öğretmenler ve veliler için haftalık ve aylık bazda öğrencinin gelişim grafikleri otomatik olarak oluşturulur.",
+          variant: "blue"
+        },
+        {
+          title: "Cihaz İçi Gizlilik",
+          text: "Tüm analizler doğrudan cihaz üzerinde yapılır; öğrenciler ve eğitim kurumları için maksimum veri gizliliği sağlanır.",
           variant: "light"
         }
       ]

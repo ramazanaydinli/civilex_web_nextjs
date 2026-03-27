@@ -22,20 +22,23 @@ const PhoneScreenContent = ({ currentIndex }: PhoneScreenContentProps) => {
   const t = heroContent[lang];
   const [internalIndex, setInternalIndex] = useState(0);
 
-  // 1.5 saniyede bir slayt değiştir
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setInternalIndex((prev) => (prev + 1) % 3);
-    }, 1500);
-    return () => clearInterval(timer);
-  }, []);
+  // Proje bazlı slayt sayısını belirliyoruz (Atik için 2, diğerleri için 3)
+  const slideCount = currentIndex === 2 ? 2 : 3;
 
-  // Proje değişince slaytı başa sar
+  // Slayt geçişi ve resetleme mantığını birleştirdik (Boş ekranı engellemek için)
   useEffect(() => {
+    // Proje her değiştiğinde slaytı ANINDA 0. indekse çek (boşluğa kaymayı önler)
     setInternalIndex(0);
-  }, [currentIndex]);
 
-  // --- 1. PROJE: POSE PERFECT PILATES (Dokunulmadı) ---
+    // 1.5 saniyede bir slayt değiştir
+    const timer = setInterval(() => {
+      setInternalIndex((prev) => (prev + 1) % slideCount);
+    }, 1500);
+
+    return () => clearInterval(timer);
+  }, [currentIndex, slideCount]);
+
+  // --- 1. PROJE: POSE PERFECT PILATES (ETİKETLER KORUNDU) ---
   if (currentIndex === 0) {
     return (
       <div className="relative w-full h-full overflow-hidden rounded-[35px] bg-gray-50">
@@ -105,13 +108,12 @@ const PhoneScreenContent = ({ currentIndex }: PhoneScreenContentProps) => {
     );
   }
 
-  // --- 2. PROJE: PENTATHLON (GÜNCELLENDİ) ---
-  // Pilates yapısının aynısı kopyalandı, içerikler Lazer Run için uyarlandı.
+  // --- 2. PROJE: PENTATHLON EXERCISE TRACKER (ETİKETLER KORUNDU) ---
   if (currentIndex === 1) {
     return (
       <div className="relative w-full h-full overflow-hidden rounded-[35px] bg-gray-50">
         
-        {/* KAYAN RAY (Aynı Mantık) */}
+        {/* KAYAN RAY */}
         <div
           className="flex h-full transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${internalIndex * 100}%)` }}
@@ -123,7 +125,7 @@ const PhoneScreenContent = ({ currentIndex }: PhoneScreenContentProps) => {
             {/* Logo: Lazer Run */}
             <div className="relative w-[150px] h-[150px] mb-4">
               <Image
-                src="/lazer_run.png" // LOGO DEĞİŞTİ
+                src="/lazer_run.png"
                 alt="Pentathlon Logo"
                 fill
                 className="object-contain"
@@ -135,13 +137,12 @@ const PhoneScreenContent = ({ currentIndex }: PhoneScreenContentProps) => {
               <span className="block text-xl font-bold text-black leading-none">
                 Pentathlon
               </span>
-              {/* Rengi Kırmızı (#ef4444) yaptık tema uyumu için */}
               <span className="block text-xl font-bold text-[#ef4444] leading-tight mt-1">
                 Exercise Tracker
               </span>
             </div>
 
-            {/* Powered By (Aynı kalıyor) */}
+            {/* Powered By */}
             <div className="absolute bottom-10 flex flex-col items-center z-20 opacity-80">
               <span className="text-[10px] text-gray-500 uppercase tracking-widest font-semibold mb-1">
                 Powered By
@@ -158,24 +159,20 @@ const PhoneScreenContent = ({ currentIndex }: PhoneScreenContentProps) => {
           </div>
 
           {/* --- SLAYT 2: EKRAN GÖRÜNTÜSÜ 1 --- */}
-          {/* Şimdilik elinde görsel yoksa yapı bozulmasın diye Pilates'tekini placeholder olarak bıraktım. */}
-          {/* Buraya '/pent_screen_1.png' gibi kendi resmin gelince değiştirirsin. */}
           <div className="w-full h-full flex-shrink-0 relative">
             <Image
-              src="/pent_1.png" // DEĞİŞTİRİLECEK
+              src="/pent_1.png"
               alt="Pentathlon Action 1"
               fill
               className="object-cover"
               priority
             />
-        
           </div>
 
           {/* --- SLAYT 3: EKRAN GÖRÜNTÜSÜ 2 --- */}
-          {/* Buraya da '/pent_screen_2.png' gelecek */}
           <div className="w-full h-full flex-shrink-0 relative">
             <Image
-              src="/pent_2.png" // DEĞİŞTİRİLECEK
+              src="/pent_2.png"
               alt="Pentathlon Action 2"
               fill
               className="object-cover"
@@ -189,6 +186,40 @@ const PhoneScreenContent = ({ currentIndex }: PhoneScreenContentProps) => {
             </div>
           </div>
 
+        </div>
+      </div>
+    );
+  }
+
+  // --- 3. PROJE: ATİK (SADECE SCREENSHOTLAR - YAZILAR SİLİNDİ) ---
+  if (currentIndex === 2) {
+    return (
+      <div className="relative w-full h-full overflow-hidden rounded-[35px] bg-gray-50">
+        <div
+          className="flex h-full transition-transform duration-500 ease-in-out"
+          style={{ transform: `translateX(-${internalIndex * 100}%)` }}
+        >
+          {/* SLAYT 1: atik_1.png */}
+          <div className="w-full h-full flex-shrink-0 relative">
+            <Image 
+              src="/atik_1.png" 
+              alt="Atik Tracking 1" 
+              fill 
+              className="object-cover" 
+              priority 
+            />
+          </div>
+
+          {/* SLAYT 2: atik_2.png */}
+          <div className="w-full h-full flex-shrink-0 relative">
+            <Image 
+              src="/atik_2.png" 
+              alt="Atik Tracking 2" 
+              fill 
+              className="object-cover" 
+              priority 
+            />
+          </div>
         </div>
       </div>
     );
