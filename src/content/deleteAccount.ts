@@ -31,5 +31,37 @@ export const deleteAccountContent = {
       warning: "UYARI: Silinen veriler geri getirilemez.",
       loading: "Form yükleniyor..."
     }
+  },
+
+  // 3. ATIK - HESAP SİLME
+  atikAccount: {
+    en: {
+      title: "Delete Atik Account",
+      description: "To permanently delete your Atik account and all associated school/progress data, please fill out the form below.",
+      warning: "WARNING: This action is irreversible. Your account and all achievements will be permanently removed.",
+      loading: "Loading form..."
+    },
+    tr: {
+      title: "Atik Hesabını Sil",
+      description: "Atik hesabınızı ve tüm okul/ilerleme verilerinizi kalıcı olarak silmek için lütfen aşağıdaki formu doldurunuz.",
+      warning: "UYARI: Bu işlem geri alınamaz. Hesabınız ve tüm başarımlarınız kalıcı olarak silinecektir.",
+      loading: "Form yükleniyor..."
+    }
+  },
+
+  // 4. ATIK - VERİ SİLME
+  atikData: {
+    en: {
+      title: "Delete My Data - Atik",
+      description: "To request the deletion of your personal sports data (reps, game scores) associated with Atik, please use the form below.",
+      warning: "WARNING: Deleted data cannot be recovered.",
+      loading: "Loading form..."
+    },
+    tr: {
+      title: "Verilerimi Sil - Atik",
+      description: "Atik ile ilişkili kişisel spor verilerinizin (tekrar sayıları, oyun skorları) silinmesini talep etmek için lütfen aşağıdaki formu kullanın.",
+      warning: "UYARI: Silinen veriler geri getirilemez.",
+      loading: "Form yükleniyor..."
+    }
   }
 };

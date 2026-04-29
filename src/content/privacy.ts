@@ -135,8 +135,86 @@ export const pilatesPrivacyContent = {
     ]
   }
 };
+
 // ==========================================
-// 3. PRIVACY POLICY ANA SAYFA (HUB) İÇERİĞİ
+// 3. ATIK (MEBSPOR) İÇERİĞİ - (ÇOCUK GİZLİLİĞİ + ON-DEVICE AI)
+// ==========================================
+export const atikPrivacyContent = {
+  en: {
+    title: "Privacy Policy & Legal Agreements - Atik",
+    lastUpdated: "Effective Date: April 2026",
+    intro: "At Atik, we prioritize the privacy and safety of our users, especially children. This Privacy Policy explains how our AI-powered sports assistant application processes data. Our core principle is privacy-by-design: We process camera data locally on your device to ensure maximum safety.",
+    sections: [
+      {
+        heading: "1. Camera Data & Local Processing (On-Device AI)",
+        content: "Our application uses your device's camera solely to analyze movements and evaluate physical activities in real-time. **Crucially: No video footage or images are ever sent to our servers or third parties.** All computer vision processing happens locally on your device (Edge Computing). Once the analysis is done (milliseconds), the image data is instantly and permanently discarded from the memory."
+      },
+      {
+        heading: "2. Data We Collect & Account Security",
+        content: "To create leaderboards and track school/student progress, we collect minimal data during registration:\n\n* **Identity & Contact:** Name, email, password, grade, and school name.\n* **Exercise Statistics:** Repetition counts, scores, and timing data.\n* **Device Information:** Device model for app stability."
+      },
+      {
+        heading: "3. Children’s Privacy (COPPA & GDPR-K)",
+        content: "Our application is designed with children's safety in mind. The physical privacy of children is entirely protected because camera feeds never leave the phone. Personal data (such as names and school details) is used strictly to display in-app leaderboards and is never shared with third-party advertisers."
+      },
+      {
+        heading: "4. Medical Disclaimer & AI Limitations",
+        content: "* **Not a Medical Device:** The App is not a medical device, diagnosis, or treatment tool. It is for physical education and awareness purposes only.\n* **AI Limitations:** AI feedback does not replace a human physical education teacher. Stop exercising immediately if you feel pain or discomfort.\n* **Disclaimer of Liability:** The user accepts all risks. The Company is not responsible for any injury arising from the use of the app."
+      },
+      {
+        heading: "5. Explicit Consent for Camera Usage",
+        content: "By using the application, you EXPLICITLY CONSENT to the processing of instant image data obtained via your mobile device's camera, limited ONLY to performing movement analysis during exercises. You understand and agree that this processing will be performed exclusively on your device (on-device), and your visual data will NOT be saved to servers, stored, or transferred to third parties."
+      },
+      {
+        heading: "6. Data Deletion Rights",
+        content: "Users and parents have full control over their accounts:\n\n* **Account & Data Deletion:** You can permanently delete your account, exercise history, and all associated personal information via the app settings. This action is irreversible."
+      },
+      {
+        heading: "7. Contact Us",
+        content: "For any questions regarding this privacy policy, children's safety, or our AI technology, please contact us:\n\n**Email:** info@civilex.ai\n\n**Phone:** +90 532 413 06 94\n\n**Address:** ODTÜ Teknokent Etkim Building, Üniversiteler, 06800 Çankaya/Ankara, Turkey"
+      }
+    ]
+  },
+  tr: {
+    title: "Gizlilik Politikası ve Yasal Metinler - Atik",
+    lastUpdated: "Yürürlük Tarihi: Nisan 2026",
+    intro: "Atik olarak, başta çocuklar olmak üzere tüm kullanıcılarımızın gizliliğini ve güvenliğini en ön planda tutuyoruz. Bu Gizlilik Politikası, yapay zeka destekli spor asistanı uygulamamızın verileri nasıl işlediğini açıklar. Temel ilkemiz 'tasarımla gelen gizlilik'tir: Maksimum güvenlik için kamera verilerini yalnızca cihazınızda yerel olarak işleriz.",
+    sections: [
+      {
+        heading: "1. Kamera Verileri ve Yerel İşleme (On-Device AI)",
+        content: "Uygulamamız, egzersizlerinizi değerlendirmek ve hareket analizi yapmak için cihazınızın kamerasını kullanır. **Önemli: Hiçbir video görüntüsü veya fotoğraf sunucularımıza veya üçüncü taraflara GÖNDERİLMEZ.** Tüm bilgisayarlı görü işlemleri tamamen cihazınızın içinde (Local Processing) gerçekleşir. Analiz yapıldığı an (milisaniyeler içinde), görüntü verisi cihaz hafızasından kalıcı olarak silinir."
+      },
+      {
+        heading: "2. Hangi Verileri Topluyoruz? ve Hesap Güvenliği",
+        content: "Okul ve öğrenci ilerlemesini takip etmek, sıralama listeleri (Leaderboard) oluşturmak için kayıt sırasında minimum veri topluyoruz:\n\n* **Kimlik ve İletişim:** Ad, soyad, e-posta, şifre, sınıf ve okul adı.\n* **Egzersiz İstatistikleri:** Tekrar sayıları, skorlar ve oyun performans verileri.\n* **Cihaz Bilgileri:** Uygulama kararlılığı için cihaz modeli."
+      },
+      {
+        heading: "3. Çocukların Gizliliği ve Güvenliği",
+        content: "Uygulamamız çocukların güvenliği gözetilerek tasarlanmıştır. Kamera görüntüsü telefonu asla terk etmediği için çocukların fiziksel gizliliği tamamen korunmaktadır. İsim ve okul gibi kişisel veriler yalnızca uygulama içi sıralamalarda kullanılır ve üçüncü taraf reklamverenlerle kesinlikle paylaşılmaz."
+      },
+      {
+        heading: "4. Tıbbi Sorumluluğun Reddi ve Yapay Zeka Sınırları",
+        content: "* **Uygulama Tıbbi Bir Cihaz Değildir:** Uygulama bir teşhis veya tedavi aracı değildir, yalnızca beden eğitimi ve spor farkındalığı amacı taşır.\n* **Yapay Zeka Sınırlamaları:** Yapay zeka geri bildirimleri, gerçek bir beden eğitimi öğretmeninin veya antrenörün yerini tutmaz. Egzersiz sırasında ağrı hissederseniz derhal durmalısınız.\n* **Sorumluluğun Reddi:** Kullanıcı riskleri kabul eder. Meydana gelebilecek yaralanma veya zararlardan Şirket sorumlu tutulamaz."
+      },
+      {
+        heading: "5. Kamera Kullanımı İçin Açık Rıza Metni",
+        content: "Uygulamayı kullanarak, mobil cihazınızın kamerası aracılığıyla elde edilecek anlık görüntü verilerinizin YALNIZCA egzersiz sırasında hareket analizi yapılması amacıyla sınırlı olarak işlenmesine AÇIK RIZA gösterirsiniz. Bu işlemenin yalnızca cihaz üzerinde (on-device) gerçekleştirileceğini, görsel verilerinizin sunuculara kaydedilmeyeceğini, depolanmayacağını veya üçüncü taraflara aktarılmayacağını peşinen kabul edersiniz."
+      },
+      {
+        heading: "6. Veri ve Hesap Silme Hakkı",
+        content: "Kullanıcılar ve ebeveynler hesapları üzerinde tam kontrole sahiptir:\n\n* **Hesap ve Veri Silme:** Uygulama içindeki ayarlar bölümünden hesabınızı, egzersiz geçmişinizi ve bağlı tüm kişisel bilgilerinizi dilediğiniz zaman kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz."
+      },
+      {
+        heading: "7. İletişim",
+        content: "Bu gizlilik politikası, çocuk güvenliği prosedürlerimiz veya yapay zeka teknolojimiz hakkında her türlü sorunuz için bize ulaşın:\n\n**E-posta:** info@civilex.ai\n\n**Telefon:** +90 532 413 06 94\n\n**Adres:** ODTÜ Teknokent Etkim Binası, Üniversiteler, 06800 Çankaya/Ankara, Türkiye"
+      }
+    ]
+  }
+};
+
+
+// ==========================================
+// 4. PRIVACY POLICY ANA SAYFA (HUB) İÇERİĞİ
 // ==========================================
 export const privacyHubContent = {
   en: {
@@ -156,6 +234,13 @@ export const privacyHubContent = {
         desc: "Privacy Policy, Children's Privacy (COPPA), and Local Processing Details.",
         href: "/privacy-policy/pentathlon-exercise-tracker",
         color: "bg-[#ef4444]" // Pentathlon kırmızı teması
+      },
+      {
+        id: "atik",
+        name: "Atik",
+        desc: "Privacy Policy, Kids Safety, On-Device AI, and Consent Forms.",
+        href: "/privacy-policy/atik",
+        color: "bg-[#FF5A5F]" // Atik kırmızı teması
       }
     ]
   },
@@ -176,6 +261,13 @@ export const privacyHubContent = {
         desc: "Gizlilik Politikası, Çocukların Gizliliği ve Yerel Veri İşleme Detayları.",
         href: "/privacy-policy/pentathlon-exercise-tracker",
         color: "bg-[#ef4444]"
+      },
+      {
+        id: "atik",
+        name: "Atik",
+        desc: "Gizlilik Politikası, Çocuk Güvenliği, Yerel Yapay Zeka ve Rıza Metinleri.",
+        href: "/privacy-policy/atik",
+        color: "bg-[#FF5A5F]"
       }
     ]
   }
