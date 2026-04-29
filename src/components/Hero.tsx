@@ -7,7 +7,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import { heroContent } from "@/content/hero";
 import PhoneScreenContent from "@/components/PhoneScreenContent";
 
-// Görsel Verileri
+// Görsel Verileri - DÜZELTİLDİ: Atik için yeşil tema (id: 3) eklendi
 const projectVisuals = [
   {
     id: 1,
@@ -18,6 +18,11 @@ const projectVisuals = [
     id: 2,
     color: "#8B5CF6",
     bgImage: "/phone_bg_purple.png"
+  },
+  {
+    id: 3,
+    color: "#10B981", // Atik için yeşil tema (örnek)
+    bgImage: "/phone_bg_green.png" // Varsa yeni bir arka plan görseli, yoksa phone_bg.png kullanabilirsin
   }
 ];
 
@@ -61,37 +66,41 @@ const Hero = () => {
   // E-posta konu başlığını dile göre ayarla
   const mailSubject = lang === 'en' ? "Test Phase Participation" : "Test Aşamasına Katılım";
 
+  // --- DÜZELTME BAŞLANGICI: Dinamik Tab Menüsü ---
+  const tabCount = t.projects.length; // Proje sayısı (Şu an 3)
+
   const tabMenu = (
-    <div className="w-full max-w-[500px] bg-gray-100 rounded-full p-1 flex relative overflow-hidden shadow-sm">
-      {/* Dolan Bar */}
+    <div className="w-full max-w-[600px] bg-gray-100 rounded-full p-1 flex relative overflow-hidden shadow-sm">
+      {/* 1. DOLAN BAR (Progress Bar) */}
       <div
         className="absolute top-1 bottom-1 rounded-full transition-all duration-75 ease-linear opacity-20"
         style={{
           backgroundColor: currentVisual.color,
-          left: currentIndex === 0 ? "4px" : "calc(50% + 2px)",
-          width: `calc(${progress / 2}% - 4px)`
+          width: `calc(${progress / tabCount}% - 4px)`,
+          left: `calc(${(currentIndex * 100) / tabCount}% + 4px)`
         }}
       ></div>
 
-      {/* Aktif Tab Kutusu */}
+      {/* 2. AKTİF TAB KUTUSU (White Background Highlight) */}
       <div
         className="absolute top-1 bottom-1 bg-white rounded-full shadow-sm border border-gray-200 transition-all duration-300 ease-in-out"
         style={{
-          width: "calc(50% - 4px)",
-          left: currentIndex === 0 ? "4px" : "calc(50%)"
+          width: `calc(${100 / tabCount}% - 4px)`,
+          left: `calc(${(currentIndex * 100) / tabCount}% + 4px)`
         }}
       ></div>
 
-      {/* Butonlar */}
+      {/* 3. BUTONLAR */}
       {t.projects.map((proj, index) => {
         const isActive = currentIndex === index;
         return (
           <button
             key={index}
             onClick={() => handleManualChange(index)}
-            className={`relative z-10 flex-1 py-3 text-[11px] md:text-sm font-bold transition-colors duration-300 text-center whitespace-nowrap overflow-hidden text-ellipsis px-2
+            className={`relative z-10 flex-1 py-3 text-[10px] md:text-xs lg:text-sm font-bold transition-colors duration-300 text-center whitespace-nowrap overflow-hidden text-ellipsis px-1
                         ${isActive ? "text-black" : "text-gray-400 hover:text-gray-600"}
                       `}
+            title={proj.name} // Üstüne gelince tam isim gözüksün
           >
             {proj.name}
           </button>
@@ -99,6 +108,7 @@ const Hero = () => {
       })}
     </div>
   );
+  // --- DÜZELTME BİTİŞİ ---
 
   return (
     <section className="relative w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-start justify-between px-6 pt-8 md:px-[100px] md:pt-6 md:pb-20 gap-12 overflow-visible">
@@ -155,6 +165,7 @@ const Hero = () => {
           {/* ARKA PLAN ŞEKLİ */}
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[520px] h-[600px] flex items-center justify-center z-0 pointer-events-none">
             <div className="relative w-[510px] h-[600px] opacity-90 transition-opacity duration-500">
+              {/* DÜZELTME: key ve src dinamik olarak currentVisual'dan alınıyor */}
               <Image
                 key={currentVisual.bgImage}
                 src={currentVisual.bgImage}

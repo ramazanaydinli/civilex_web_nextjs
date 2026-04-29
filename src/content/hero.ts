@@ -24,6 +24,13 @@ export const heroContent = {
         mainDescription: "Civilex.AI pushes the boundaries of sports technology. Our Pentathlon Exercise Tracker uses computer vision to analyze shooting stance and stability in real-time for Laser Run. We provide data-driven insights to optimize athletic performance.",
         tagline: "Precision Analytics for Laser Run",
         description: "Advanced computer vision system for modern pentathletes."
+      },
+      {
+        id: 3,
+        name: "Atik",
+        mainDescription: "Atik is an AI-powered app designed for K-12 students to track their physical development and exercise routines. It provides data-driven progress monitoring by tracking workouts directly on the phone.",
+        tagline: "K-12 Progress Tracker",
+        description: "Smart exercise and performance monitoring system for students."
       }
     ]
   },
@@ -50,6 +57,13 @@ export const heroContent = {
         mainDescription: "Civilex.AI, spor teknolojilerinde uzmanlaşmış yenilikçi bir girişimdir. Pentatlon Egzersiz Takibi projemiz, Lazer Run etabında atış duruşunu ve stabilitesini analiz etmek için bilgisayarlı görü teknolojisini kullanır. Sporcuların performansını zirveye taşımak için veriye dayalı çözümler sunuyoruz.",
         tagline: "Lazer Run İçin Hassas Analiz",
         description: "Modern pentatlon sporcuları için atış analizi sistemi."
+      },
+      {
+        id: 3,
+        name: "Atik",
+        mainDescription: "Atik, K-12 seviyesindeki öğrencilerin fiziksel gelişimlerini ve egzersiz rutinlerini takip etmek için geliştirilmiş yapay zeka destekli bir uygulamadır. Öğrencilerin antrenmanlarını telefon üzerinden izleyerek veriye dayalı gelişim takibi sunar.",
+        tagline: "K-12 Gelişim Takipçisi",
+        description: "Öğrenciler için akıllı egzersiz ve performans izleme sistemi."
       }
     ]
   }
