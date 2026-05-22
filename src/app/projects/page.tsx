@@ -296,14 +296,16 @@ export default function ProjectsPage() {
                  ))}
               </div>
 
-              {/* Sağ Taraf: Dekoratif Alan veya Görsel */}
+              {/* Sağ Taraf: Atik Logosu */}
               <div className="lg:col-span-5 flex justify-center lg:justify-end relative">
                 <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
-                   {/* Buraya Atik için özel bir illüstrasyon veya görsel gelene kadar placeholder gibi bir glow ekleyebilirsin */}
                    <div className="absolute inset-0 bg-gradient-to-tr from-[#10B981]/20 to-transparent blur-3xl rounded-full animate-pulse"></div>
-                   <div className="relative z-10 w-full h-full flex items-center justify-center">
-                      <span className="text-8xl font-bold text-[#10B981]/20">ATİK</span>
-                   </div>
+                   <Image
+                     src="/atik_logo.png"
+                     alt="Atik Arena Logo"
+                     fill
+                     className="relative z-10 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                   />
                 </div>
               </div>
 

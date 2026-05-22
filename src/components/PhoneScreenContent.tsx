@@ -22,8 +22,8 @@ const PhoneScreenContent = ({ currentIndex }: PhoneScreenContentProps) => {
   const t = heroContent[lang];
   const [internalIndex, setInternalIndex] = useState(0);
 
-  // Proje bazlı slayt sayısını belirliyoruz (Atik için 2, diğerleri için 3)
-  const slideCount = currentIndex === 2 ? 2 : 3;
+  // Proje bazlı slayt sayısı: hepsi 3
+  const slideCount = 3;
 
   // Slayt geçişi ve resetleme mantığını birleştirdik (Boş ekranı engellemek için)
   useEffect(() => {
@@ -212,12 +212,23 @@ const PhoneScreenContent = ({ currentIndex }: PhoneScreenContentProps) => {
 
           {/* SLAYT 2: atik_2.png */}
           <div className="w-full h-full flex-shrink-0 relative">
-            <Image 
-              src="/atik_2.png" 
-              alt="Atik Tracking 2" 
-              fill 
-              className="object-cover" 
-              priority 
+            <Image
+              src="/atik_2.png"
+              alt="Atik Tracking 2"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+
+          {/* SLAYT 3: atik_3.png */}
+          <div className="w-full h-full flex-shrink-0 relative">
+            <Image
+              src="/atik_3.png"
+              alt="Atik Tracking 3"
+              fill
+              className="object-cover"
+              priority
             />
           </div>
         </div>

@@ -167,7 +167,7 @@ export const atikPrivacyContent = {
       },
       {
         heading: "6. Data Deletion Rights",
-        content: "Users and parents have full control over their accounts:\n\n* **Account & Data Deletion:** You can permanently delete your account, exercise history, and all associated personal information via the app settings. This action is irreversible."
+        content: "Users and parents have full control over their accounts. You can delete your account through two channels:\n\n* **In-App:** Use the 'Delete My Account' button under Profile > Settings > Danger Zone to permanently delete your account, exercise history, scores, and all associated personal information.\n* **On the Web:** If you no longer have access to the app, you can submit a deletion request via the form at [civilex.ai/atik/delete-account](/atik/delete-account). Requests are processed within 30 days.\n\nBoth methods result in the same outcome: Your account, exercise history, game progress, leaderboard entries, and active subscription will be permanently deleted. This action is irreversible."
       },
       {
         heading: "7. Contact Us",
@@ -202,7 +202,7 @@ export const atikPrivacyContent = {
       },
       {
         heading: "6. Veri ve Hesap Silme Hakkı",
-        content: "Kullanıcılar ve ebeveynler hesapları üzerinde tam kontrole sahiptir:\n\n* **Hesap ve Veri Silme:** Uygulama içindeki ayarlar bölümünden hesabınızı, egzersiz geçmişinizi ve bağlı tüm kişisel bilgilerinizi dilediğiniz zaman kalıcı olarak silebilirsiniz. Bu işlem geri alınamaz."
+        content: "Kullanıcılar ve ebeveynler hesapları üzerinde tam kontrole sahiptir. Hesabınızı iki yoldan silebilirsiniz:\n\n* **Uygulama İçinden:** Profil > Ayarlar > Tehlikeli Bölge bölümündeki 'Hesabımı Sil' butonu ile hesabınızı, egzersiz geçmişinizi, skorlarınızı ve bağlı tüm kişisel bilgilerinizi kalıcı olarak silebilirsiniz.\n* **Web Üzerinden:** Uygulamaya erişiminiz yoksa, [civilex.ai/atik/delete-account](/atik/delete-account) adresindeki form aracılığıyla silme talebinde bulunabilirsiniz. Talepleriniz 30 gün içinde işleme alınır.\n\nHer iki yöntem de aynı sonucu doğurur: Hesabınız, egzersiz geçmişiniz, oyun progress'iniz, leaderboard kayıtlarınız ve aktif aboneliğiniz kalıcı olarak silinir. Bu işlem geri alınamaz."
       },
       {
         heading: "7. İletişim",

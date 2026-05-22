@@ -28,12 +28,13 @@ export default function AtikDeleteAccountPage() {
                 <div className="w-full bg-white rounded-[20px] border border-gray-200 shadow-lg overflow-hidden relative min-h-[900px]">
                     <div className="absolute inset-0 flex items-center justify-center text-gray-400 z-0">{t.loading}</div>
                     
-                    {/* HESAP SİLME FORMU */}
-                    {/* DİKKAT: Buradaki src kısmına Atik Hesap Silme için oluşturduğunuz Google Form linkini koymalısın */}
-                    <iframe 
-                        src="https://docs.google.com/forms/d/e/SENIN_FORM_ID_BURAYA/viewform?embedded=true" 
+                    {/* HESAP SİLME FORMU — Tally */}
+                    <iframe
+                        src="https://tally.so/embed/rjk67N?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
                         className="relative z-10 w-full h-full min-h-[900px]"
-                        frameBorder="0" marginHeight={0} marginWidth={0} style={{ backgroundColor: 'white' }}
+                        frameBorder="0" marginHeight={0} marginWidth={0} style={{ backgroundColor: 'transparent' }}
+                        loading="lazy"
+                        title="Atik Arena - Hesap Silme Formu"
                     >
                         Yükleniyor...
                     </iframe>
