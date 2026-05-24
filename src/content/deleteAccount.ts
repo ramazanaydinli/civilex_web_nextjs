@@ -49,18 +49,21 @@ export const deleteAccountContent = {
     }
   },
 
-  // 4. ATIK - VERİ SİLME
+  // 4. ATIK - VERİ SİLME (hesap silmeden — Play Console commitment, 2026-05-24)
+  // Atik kullanıcısı sadece skor/okul bilgisini sıfırlamak isterse bu sayfa.
+  // Hesap + Premium subscription + parentalConsent audit trail KORUNUR.
+  // Tam silme için /atik/delete-account ayrı.
   atikData: {
     en: {
-      title: "Delete My Data - Atik",
-      description: "To request the deletion of your personal sports data (reps, game scores) associated with Atik, please use the form below.",
-      warning: "WARNING: Deleted data cannot be recovered.",
+      title: "Reset My Atik Data",
+      description: "Reset your scores and school info without deleting your account. Your account stays active and your Premium subscription continues — only game progress and school details are removed.",
+      warning: "NOTE: Scores and school info cannot be recovered once deleted. Your account, nickname, team and Premium subscription stay intact.",
       loading: "Loading form..."
     },
     tr: {
-      title: "Verilerimi Sil - Atik",
-      description: "Atik ile ilişkili kişisel spor verilerinizin (tekrar sayıları, oyun skorları) silinmesini talep etmek için lütfen aşağıdaki formu kullanın.",
-      warning: "UYARI: Silinen veriler geri getirilemez.",
+      title: "Atik Verilerimi Sıfırla",
+      description: "Hesabını silmeden sadece skor ve okul bilgini sıfırlamak için aşağıdaki formu doldur. Hesabın aktif kalır, Premium aboneliğin devam eder — yalnız oyun ilerlemen ve okul bilgilerin silinir.",
+      warning: "UYARI: Skor ve okul bilgisi silindikten sonra geri getirilemez. Hesabın, takma adın, takımın ve Premium aboneliğin aynen kalır.",
       loading: "Form yükleniyor..."
     }
   }
