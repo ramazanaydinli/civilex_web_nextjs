@@ -201,12 +201,12 @@ const PhoneScreenContent = ({ currentIndex }: PhoneScreenContentProps) => {
         >
           {/* SLAYT 1: atik_1.png */}
           <div className="w-full h-full flex-shrink-0 relative">
-            <Image 
-              src="/atik_1.png" 
-              alt="Atik Tracking 1" 
-              fill 
-              className="object-cover" 
-              priority 
+            <Image
+              src="/atik_1.png"
+              alt="Atik Arena Tracking 1"
+              fill
+              className="object-cover"
+              priority
             />
           </div>
 
@@ -214,7 +214,7 @@ const PhoneScreenContent = ({ currentIndex }: PhoneScreenContentProps) => {
           <div className="w-full h-full flex-shrink-0 relative">
             <Image
               src="/atik_2.png"
-              alt="Atik Tracking 2"
+              alt="Atik Arena Tracking 2"
               fill
               className="object-cover"
               priority
@@ -225,7 +225,7 @@ const PhoneScreenContent = ({ currentIndex }: PhoneScreenContentProps) => {
           <div className="w-full h-full flex-shrink-0 relative">
             <Image
               src="/atik_3.png"
-              alt="Atik Tracking 3"
+              alt="Atik Arena Tracking 3"
               fill
               className="object-cover"
               priority

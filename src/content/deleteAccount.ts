@@ -33,17 +33,17 @@ export const deleteAccountContent = {
     }
   },
 
-  // 3. ATIK - HESAP SİLME
+  // 3. ATIK ARENA - HESAP SİLME (brand name: "Atik Arena" — code identifier 'atikAccount' korunur)
   atikAccount: {
     en: {
-      title: "Delete Atik Account",
-      description: "To permanently delete your Atik account and all associated school/progress data, please fill out the form below.",
+      title: "Delete Atik Arena Account",
+      description: "To permanently delete your Atik Arena account and all associated school/progress data, please fill out the form below.",
       warning: "WARNING: This action is irreversible. Your account and all achievements will be permanently removed.",
       loading: "Loading form..."
     },
     tr: {
-      title: "Atik Hesabını Sil",
-      description: "Atik hesabınızı ve tüm okul/ilerleme verilerinizi kalıcı olarak silmek için lütfen aşağıdaki formu doldurunuz.",
+      title: "Atik Arena Hesabını Sil",
+      description: "Atik Arena hesabınızı ve tüm okul/ilerleme verilerinizi kalıcı olarak silmek için lütfen aşağıdaki formu doldurunuz.",
       warning: "UYARI: Bu işlem geri alınamaz. Hesabınız ve tüm başarımlarınız kalıcı olarak silinecektir.",
       loading: "Form yükleniyor..."
     }
@@ -55,14 +55,14 @@ export const deleteAccountContent = {
   // Tam silme için /atik/delete-account ayrı.
   atikData: {
     en: {
-      title: "Reset My Atik Data",
-      description: "Reset your scores and school info without deleting your account. Your account stays active and your Premium subscription continues — only game progress and school details are removed.",
+      title: "Reset My Atik Arena Data",
+      description: "Reset your scores and school info without deleting your Atik Arena account. Your account stays active and your Premium subscription continues — only game progress and school details are removed.",
       warning: "NOTE: Scores and school info cannot be recovered once deleted. Your account, nickname, team and Premium subscription stay intact.",
       loading: "Loading form..."
     },
     tr: {
-      title: "Atik Verilerimi Sıfırla",
-      description: "Hesabını silmeden sadece skor ve okul bilgini sıfırlamak için aşağıdaki formu doldur. Hesabın aktif kalır, Premium aboneliğin devam eder — yalnız oyun ilerlemen ve okul bilgilerin silinir.",
+      title: "Atik Arena Verilerimi Sıfırla",
+      description: "Atik Arena hesabını silmeden sadece skor ve okul bilgini sıfırlamak için aşağıdaki formu doldur. Hesabın aktif kalır, Premium aboneliğin devam eder — yalnız oyun ilerlemen ve okul bilgilerin silinir.",
       warning: "UYARI: Skor ve okul bilgisi silindikten sonra geri getirilemez. Hesabın, takma adın, takımın ve Premium aboneliğin aynen kalır.",
       loading: "Form yükleniyor..."
     }

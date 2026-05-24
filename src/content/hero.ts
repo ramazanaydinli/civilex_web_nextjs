@@ -27,8 +27,8 @@ export const heroContent = {
       },
       {
         id: 3,
-        name: "Atik",
-        mainDescription: "Atik is an AI-powered app designed for K-12 students to track their physical development and exercise routines. It provides data-driven progress monitoring by tracking workouts directly on the phone.",
+        name: "Atik Arena",
+        mainDescription: "Atik Arena is an AI-powered app designed for K-12 students to track their physical development and exercise routines. It provides data-driven progress monitoring by tracking workouts directly on the phone.",
         tagline: "K-12 Progress Tracker",
         description: "Smart exercise and performance monitoring system for students."
       }
@@ -60,8 +60,8 @@ export const heroContent = {
       },
       {
         id: 3,
-        name: "Atik",
-        mainDescription: "Atik, K-12 seviyesindeki öğrencilerin fiziksel gelişimlerini ve egzersiz rutinlerini takip etmek için geliştirilmiş yapay zeka destekli bir uygulamadır. Öğrencilerin antrenmanlarını telefon üzerinden izleyerek veriye dayalı gelişim takibi sunar.",
+        name: "Atik Arena",
+        mainDescription: "Atik Arena, K-12 seviyesindeki öğrencilerin fiziksel gelişimlerini ve egzersiz rutinlerini takip etmek için geliştirilmiş yapay zeka destekli bir uygulamadır. Öğrencilerin antrenmanlarını telefon üzerinden izleyerek veriye dayalı gelişim takibi sunar.",
         tagline: "K-12 Gelişim Takipçisi",
         description: "Öğrenciler için akıllı egzersiz ve performans izleme sistemi."
       }

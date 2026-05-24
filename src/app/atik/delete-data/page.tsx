@@ -51,7 +51,7 @@ export default function AtikDeleteDataPage() {
                         className="relative z-10 w-full h-full min-h-[900px]"
                         frameBorder="0" marginHeight={0} marginWidth={0} style={{ backgroundColor: 'transparent' }}
                         loading="lazy"
-                        title="Atik - Veri Silme Formu"
+                        title="Atik Arena - Veri Silme Formu"
                     >
                         Yükleniyor...
                     </iframe>

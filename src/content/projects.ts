@@ -79,7 +79,7 @@ export const projectsContent = {
       ]
     },
     atik: {
-      title: "Atik: K-12 Physical Development",
+      title: "Atik Arena: K-12 Physical Development",
       description: "A comprehensive ecosystem that analyzes students' sports performance with AI and reports their progress in real-time.",
       cards: [
         {
@@ -180,7 +180,7 @@ export const projectsContent = {
       ]
     },
     atik: {
-      title: "Atik: K-12 Fiziksel Gelişim",
+      title: "Atik Arena: K-12 Fiziksel Gelişim",
       description: "Öğrencilerin spor performansını yapay zeka ile analiz eden ve gelişimlerini gerçek zamanlı olarak raporlayan kapsamlı bir ekosistem.",
       cards: [
         {
