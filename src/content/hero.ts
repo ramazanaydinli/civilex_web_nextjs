@@ -6,6 +6,8 @@ export const heroContent = {
     title: "AI R&D in Action",
     subtitle: "From Ideas to Intelligent Products",
     cta: "Participate in the Test Phase",
+    download: "Get it on Google Play",
+    platformNote: "Now on Android",
     paused: "Paused",
     time: "Time",
     projects: [
@@ -23,6 +25,8 @@ export const heroContent = {
     title: "Günlük Hayatta Yapay Zeka",
     subtitle: "Fikirlerden Akıllı Ürünlere",
     cta: "Test Aşamasına Katıl",
+    download: "Google Play'den İndir",
+    platformNote: "Android'de yayında",
     paused: "Durduruldu",
     time: "Süre",
     projects: [

@@ -9,13 +9,16 @@ import PhoneScreenContent from "@/components/PhoneScreenContent";
 // Tek öne çıkan ürün: Atik Arena (yeşil tema)
 const ATIK_BG = "/phone_bg_green.png";
 
+// Atik Arena Google Play mağaza linki (Android, canlı)
+const ATIK_PLAY_URL = "https://play.google.com/store/apps/details?id=com.civilexai.atik";
+
 const Hero = () => {
   const { lang } = useLanguage();
   const t = heroContent[lang];
   const atik = t.projects[0]; // Artık tek ürün var
 
-  // E-posta konu başlığını dile göre ayarla
-  const mailSubject = lang === "en" ? "Test Phase Participation" : "Test Aşamasına Katılım";
+  // Dile göre resmi Google Play rozeti
+  const playBadge = lang === "tr" ? "/gplay_badge_tr.png" : "/gplay_badge_en.png";
 
   return (
     <section className="relative w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-start justify-between px-6 pt-8 md:px-[100px] md:pt-6 md:pb-20 gap-12 overflow-visible">
@@ -42,13 +45,26 @@ const Hero = () => {
           </p>
         </div>
 
-        {/* CTA (mailto linki) */}
+        {/* CTA — Google Play (Android, canlı) */}
         <a
-          href={`mailto:info@civilex.ai?subject=${encodeURIComponent(mailSubject)}`}
-          className="bg-[#171717] text-white px-8 py-4 rounded-xl font-medium text-lg hover:bg-black hover:scale-105 transition-all shadow-lg inline-block text-center"
+          href={ATIK_PLAY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={t.download}
+          className="inline-block transition-transform hover:scale-105 active:scale-95"
         >
-          {t.cta}
+          <Image
+            src={playBadge}
+            alt={t.download}
+            width={646}
+            height={250}
+            priority
+            className="h-[60px] w-auto"
+          />
         </a>
+
+        {/* Platform notu */}
+        <p className="mt-3 text-sm text-gray-400">{t.platformNote}</p>
 
       </div>
 
