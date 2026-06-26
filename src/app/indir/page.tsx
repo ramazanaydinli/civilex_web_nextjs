@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const PLAY_URL = "https://play.google.com/store/apps/details?id=com.civilexai.atik";
+const TESTFLIGHT_URL = "https://testflight.apple.com/join/DqUPsrdF";
 
 const copy = {
   tr: {
@@ -15,10 +16,10 @@ const copy = {
     android: "Android",
     androidSub: "Google Play'den indir",
     iphone: "iPhone",
-    iphoneSub: "App Store",
-    iosTitle: "iOS sürümü çok yakında!",
-    iosMsg: "iPhone uygulaması yolda. Şimdilik Android'de oynayabilirsin.",
-    iosAlt: "Android'de oyna",
+    iphoneSub: "Beta · TestFlight",
+    iosTitle: "iOS beta yayında!",
+    iosMsg: "Atik Arena iPhone'da TestFlight ile beta testte. Katılmak için önce Apple'ın ücretsiz TestFlight uygulamasını yüklemen gerekir.",
+    iosJoin: "TestFlight'ta katıl",
     back: "Geri dön",
     shot: "Telefonu koy, karşısına geç, hareketle oyna.",
     foot: "Civilex.AI · Hareketle oynanan çocuk oyunları",
@@ -30,10 +31,10 @@ const copy = {
     android: "Android",
     androidSub: "Get it on Google Play",
     iphone: "iPhone",
-    iphoneSub: "App Store",
-    iosTitle: "iOS version coming very soon!",
-    iosMsg: "The iPhone app is on the way. For now you can play on Android.",
-    iosAlt: "Play on Android",
+    iphoneSub: "Beta · TestFlight",
+    iosTitle: "iOS beta is live!",
+    iosMsg: "Atik Arena is in beta on iPhone through TestFlight. You'll first need Apple's free TestFlight app to join.",
+    iosJoin: "Join on TestFlight",
     back: "Go back",
     shot: "Place the phone, step in front, play with movement.",
     foot: "Civilex.AI · Move-to-play games for kids",
@@ -135,12 +136,13 @@ export default function Indir() {
             <p className="font-extrabold text-xl mb-1">{t.iosTitle}</p>
             <p className="text-gray-600 mb-5 leading-relaxed">{t.iosMsg}</p>
             <a
-              href={PLAY_URL}
+              href={TESTFLIGHT_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-[#F25E47] text-white rounded-2xl py-3.5 px-5 font-bold mb-3 shadow-[0_10px_22px_-8px_rgba(242,94,71,0.7)] hover:-translate-y-0.5 active:scale-[0.98] transition-all"
+              className="w-full flex items-center justify-center gap-2 bg-[#1B1A1F] text-white rounded-2xl py-3.5 px-5 font-bold mb-3 shadow-[0_10px_22px_-8px_rgba(0,0,0,0.5)] hover:-translate-y-0.5 active:scale-[0.98] transition-all"
             >
-              {t.iosAlt}
+              <AppleIcon className="w-5 h-5 fill-white shrink-0" />
+              {t.iosJoin}
             </a>
             <button onClick={() => { setShowIos(false); }} className="text-sm font-medium text-gray-500 hover:text-black underline">
               {t.back}

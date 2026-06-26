@@ -8,6 +8,7 @@ export const heroContent = {
     cta: "Participate in the Test Phase",
     download: "Get it on Google Play",
     platformNote: "Now on Android",
+    iosBeta: "iPhone (Beta) — Join on TestFlight",
     paused: "Paused",
     time: "Time",
     projects: [
@@ -27,6 +28,7 @@ export const heroContent = {
     cta: "Test Aşamasına Katıl",
     download: "Google Play'den İndir",
     platformNote: "Android'de yayında",
+    iosBeta: "iPhone (Beta) — TestFlight'ta katıl",
     paused: "Durduruldu",
     time: "Süre",
     projects: [
