@@ -9,7 +9,7 @@ export const footerContent = {
     contactBadge: "Contact us:",
     emailLabel: "Email:",
     phoneLabel: "Phone:",
-    rights: "© 2025 Civilex.AI . All Rights Reserved.",
+    rights: "© 2026 Civilex.AI . All Rights Reserved.",
     privacy: "Privacy Policy",
     privacyLink: "/privacy-policy" 
   },
@@ -23,7 +23,7 @@ export const footerContent = {
     contactBadge: "Bize Ulaşın:",
     emailLabel: "E-posta:",
     phoneLabel: "Tel:",
-    rights: "© 2025 Civilex.AI . Tüm Hakları Saklıdır.",
+    rights: "© 2026 Civilex.AI . Tüm Hakları Saklıdır.",
     privacy: "Gizlilik Politikası",
     privacyLink: "/privacy-policy"
   }

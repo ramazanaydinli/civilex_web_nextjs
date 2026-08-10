@@ -7,10 +7,13 @@ import Image from "next/image";
 // --- ATİK ARENA EKRAN GÖRÜNTÜLERİ ---
 // Telefon mockup'ında dönen slaytlar. Kare eklemek/değiştirmek için
 // sadece bu listeyi güncelle (dosyalar public/ altında olmalı, telefon oranı ~9:19).
+// ⚠️ atik_2.png (oyun menüsü) 2026-08-10'da listeden ÇIKARILDI: karede sağ üstte
+// hata ayıklama (bug) düğmesi görünüyor, ayrıca oyun adları eski ("Balon Patlatma",
+// "Kaleci Antrenmanı") ve ORTAOKUL sekmesi 6–10 yaş konumlandırmasıyla çelişiyor.
+// Taze kare gelince yenisi konup listeye geri eklenecek.
 const atikSlides = [
+  { src: "/atik_3.png", alt: "Atik Arena – Vücudun kumandan: canlı iskelet takibi" },
   { src: "/atik_1.png", alt: "Atik Arena – Açılış ekranı" },
-  { src: "/atik_2.png", alt: "Atik Arena – Oyun menüsü" },
-  { src: "/atik_3.png", alt: "Atik Arena – Vücut kalibrasyonu" },
 ];
 
 const PhoneScreenContent = () => {

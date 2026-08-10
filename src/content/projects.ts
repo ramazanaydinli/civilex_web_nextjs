@@ -1,202 +1,208 @@
+// src/content/projects.ts
+//
+// YAPI (2026-08-10 yeniden düzenlendi):
+//   atik → yayındaki ana ürün, sayfanın en üstünde, zengin bölüm
+//   rnd  → PilAItes / Fizyoterapi / Kemer Tespiti, aşağıda kompakt Ar-Ge kartları
+//
+// 🚨 DOĞRULUK KURALI: buraya SADECE uygulamada gerçekten yayında olan özellik
+// yazılır. Oyun listesi `app/.../games/registry/modules/*GameModule.kt` içindeki
+// `isComingSoon = false` olan modüllerle birebir eşleşir. Yeni oyun açıldığında
+// (isComingSoon=false yapıldığında) buraya da eklenir.
+
 export const projectsContent = {
   en: {
     hero: {
       title: "Where Research Meets Reality",
-      description: "Explore our growing collection of applied AI projects — Each project reflects our mission: to build intelligent, on-device AI that solves real problems, securely and efficiently."
+      description:
+        "On-device AI that solves real problems, securely and efficiently — from computer-vision research to a product families use every day."
     },
-    pilates: {
-      title: "PilAItes",
-      description: "PilAItes is an AI-powered smart Pilates coach developed by Civilex.AI, designed to guide and correct your workouts in real time. Using computer vision, it turns your phone into a private trainer — helping you move better, safer, and smarter.",
-      cards: [
-        {
-          title: "AI-Powered Form & Posture Correction",
-          text: "Using your phone's camera, PilAltes becomes your virtual spotter. Our intelligent AI analyzes your dynamic movements in real-time. If it detects a mistake in your posture or form, it provides immediate, corrective audio cues.",
-          variant: "dark"
-        },
-        {
-          title: "Truly Personalized Workout Programs",
-          text: "PilAltes is your personal trainer that learns and adapts to you. Based on your progress, goals, and performance, the app designs a unique workout plan tailored just for you.",
-          variant: "blue"
-        },
-        {
-          title: "Uncompromising On-Device Privacy",
-          text: "Your privacy is our foundation. All AI processing and motion analysis happen directly on your phone. No sensitive video of you or your home is ever recorded or uploaded to a server.",
-          variant: "light"
-        }
-      ]
-    },
-    physio: {
-      title: "Your Pocket Physiotherapist",
-      description: "The Physiotherapy Clinic of Civilex is an AI-powered remote, clinician-supervised service that helps you recover from injuries, manage chronic pain, and improve your physical function from the comfort of your home.",
-      cards: [
-        {
-          title: "AI-Powered Motion Tracking & Guidance",
-          text: "Using your phone's camera, the app acts as your virtual therapist, providing real-time visual feedback to ensure you are performing each exercise with the correct form.",
-          variant: "dark"
-        },
-        {
-          title: "Adaptive Exercise Modification",
-          text: "Our intelligent AI understands when you're struggling. If a particular movement is too difficult, the app instantly suggests a simpler, therapist-approved alternative.",
-          variant: "light"
-        },
-        {
-          title: "Seamless & Automated Reporting",
-          text: "Every repetition and session is automatically logged and summarized. This crucial progress data is sent in real-time directly to your physiotherapist.",
-          variant: "blue"
-        },
-        {
-          title: "Uncompromising On-Device Privacy",
-          text: "Your privacy is paramount. All video processing happens directly on your phone—no sensitive visual data is ever recorded or uploaded to a server.",
-          variant: "light"
-        }
-      ]
-    },
-    harness: {
-      title: "AI-Powered Harness Detection",
-      watchVideo: "Watch the video",
-      description: "This AI-powered drone monitoring system by Civilex.AI ensures real-time safety compliance on high-rise worksites. Using computer vision, it detects missing harnesses and alerts safety teams instantly.",
-      cards: [
-        {
-          title: "Real-Time Analysis",
-          text: "Our system processes a live video stream from a drone monitoring your high-rise worksite.",
-          variant: "dark"
-        },
-        {
-          title: "Intelligent Detection",
-          text: "The AI model is expertly trained to distinguish in real-time whether workers are properly attached to their safety lines and harnesses.",
-          variant: "light"
-        },
-        {
-          title: "Instantaneous Alerts",
-          text: "The moment a worker is detected without proper fall protection, an immediate alert—complete with visual evidence—is dispatched.",
-          variant: "blue"
-        },
-        {
-          title: "Prevent Accidents Before They Happen",
-          text: "By providing this crucial, real-time oversight, we empower your team to take proactive measures, enforce safety protocols, and ultimately save lives.",
-          variant: "light"
-        }
-      ]
-    },
+
+    // --- YAYINDAKİ ANA ÜRÜN ---
     atik: {
-      title: "Atik Arena: K-12 Physical Development",
-      description: "A comprehensive ecosystem that analyzes students' sports performance with AI and reports their progress in real-time.",
+      eyebrow: "Flagship Product · Live on Google Play",
+      title: "Atik Arena",
+      tagline: "No controller. You are the hero.",
+      description:
+        "A camera-controlled motion game arena for children aged 6–10. The child moves in front of the phone's camera, and on-device AI reads their body movement in real time and places them inside the game. No controller, no touchscreen, no extra hardware.",
+      facts: [
+        { label: "Age group", value: "6–10" },
+        { label: "Platform", value: "Android live · iOS beta" },
+        { label: "Vision processing", value: "100% on-device" },
+        { label: "Pricing", value: "Free to start" }
+      ],
       cards: [
         {
-          title: "Precise Motion Tracking",
-          text: "Students' exercise forms are analyzed instantly through the camera to ensure safety and efficiency.",
+          title: "No controller — just a camera",
+          text: "The game is played with the camera. On-device pose detection reads the child's body movement and turns it into gameplay instantly. No controller, no touchscreen, no accessory to buy — a phone or tablet is all it takes.",
           variant: "dark"
         },
         {
-          title: "Progress Reporting",
-          text: "Student's progress charts are automatically generated on a weekly and monthly basis for teachers and parents.",
+          title: "Camera footage never leaves the device",
+          text: "All vision processing happens inside the phone. The camera feed is never recorded, never sent to a server, never uploaded anywhere. A privacy-first design built for children's data — safe for parents and schools alike.",
+          variant: "light"
+        },
+        {
+          title: "Play and movement in one",
+          text: "The child knows they are playing a game and never notices they are exercising. Each game targets a different motor skill: reflexes, balance, coordination, reaction time and stamina.",
           variant: "blue"
         },
         {
-          title: "On-Device Privacy",
-          text: "All analysis is done locally on the device, ensuring maximum privacy for students and educational institutions.",
+          title: "Built to be played together",
+          text: "In \"Get in Shape\", two children stand in front of the same camera and clear the wall together in co-op mode. Turns a single phone into a shared activity — for siblings, classrooms and family time.",
           variant: "light"
+        }
+      ],
+      gamesTitle: "Games in the arena",
+      gamesNote:
+        "Every game is built from levels rated 1 to 3 stars; the stars a child collects unlock the next game, so difficulty grows at their own pace. New games are added with each release.",
+      games: [
+        {
+          name: "Animal Rescue",
+          text: "Reach out and pop the balloons to free the animals inside. Reflexes and hand-eye coordination."
+        },
+        {
+          name: "Goalkeeper",
+          text: "Save the shots coming at your goal. Curled shots train anticipation and reaction time."
+        },
+        {
+          name: "Runner",
+          text: "Run in place, dodge the obstacles, collect the coins. Pace and stamina."
+        },
+        {
+          name: "Get in Shape",
+          text: "Fit your body through the hole in the approaching wall. Playable solo or two-player co-op."
+        },
+        {
+          name: "Candy Pop",
+          text: "Pop the matching candies with your movements. Speed and focus."
+        },
+        {
+          name: "Sauce Time",
+          text: "Catch the falling tomatoes and fill the crate. A 3D scene against the clock."
+        }
+      ]
+    },
+
+    // --- AR-GE ÇALIŞMALARI (ürün değil, araştırma) ---
+    rnd: {
+      eyebrow: "R&D",
+      title: "Our R&D Work",
+      description:
+        "The on-device vision engine behind Atik Arena grew out of these studies. The projects below are research and prototype work rather than commercial products.",
+      items: [
+        {
+          category: "Mobile AI",
+          title: "PilAItes",
+          text: "A Pilates coach study that analyses posture through the camera in real time and delivers corrective audio cues — the first testbed for our on-device pose pipeline."
+        },
+        {
+          category: "Health Tech",
+          title: "Physiotherapy Clinic",
+          text: "Research into clinician-supervised remote exercise: motion tracking with real-time visual feedback, adaptive difficulty and automated session reporting."
+        },
+        {
+          category: "Safety AI",
+          title: "Harness Detection",
+          text: "A computer-vision study that detects from drone footage whether workers at height are properly attached to their safety lines, and alerts safety teams with visual evidence."
         }
       ]
     }
   },
+
   tr: {
     hero: {
       title: "Araştırmanın Gerçekle Buluştuğu Yer",
-      description: "Büyüyen uygulamalı yapay zeka projeleri koleksiyonumuzu keşfedin — Her proje misyonumuzu yansıtır: gerçek sorunları güvenli ve verimli bir şekilde çözen akıllı, cihaz içi (on-device) yapay zeka geliştirmek."
+      description:
+        "Gerçek sorunları güvenli ve verimli şekilde çözen cihaz-içi (on-device) yapay zekâ — bilgisayarlı görü araştırmalarından ailelerin her gün kullandığı bir ürüne."
     },
-    pilates: {
-      title: "PilAItes",
-      description: "PilAItes, Civilex.AI tarafından geliştirilen, antrenmanlarınızı gerçek zamanlı olarak yönlendirmek ve düzeltmek için tasarlanmış yapay zeka destekli akıllı bir pilates koçudur.",
-      cards: [
-        {
-          title: "Yapay Zeka Destekli Form ve Duruş Düzeltme",
-          text: "Telefonunuzun kamerasını kullanarak PilAltes sanal gözetmeniniz olur. Akıllı yapay zekamız dinamik hareketlerinizi gerçek zamanlı olarak analiz eder.",
-          variant: "dark"
-        },
-        {
-          title: "Gerçekten Kişiselleştirilmiş Antrenman Programları",
-          text: "PilAltes, sizi öğrenen ve size uyum sağlayan kişisel antrenörünüzdür. İlerlemenize, hedeflerinize ve performansınıza göre uygulama size özel bir plan tasarlar.",
-          variant: "blue"
-        },
-        {
-          title: "Tavizsiz Cihaz İçi Gizlilik",
-          text: "Gizliliğiniz temelimizdir. Tüm yapay zeka işlemleri ve hareket analizi doğrudan telefonunuzda gerçekleşir. Sizin veya evinizin hassas videoları asla kaydedilmez.",
-          variant: "light"
-        }
-      ]
-    },
-    physio: {
-      title: "Cebinizdeki Fizyoterapist",
-      description: "Civilex Fizyoterapi Kliniği, yaralanmalardan kurtulmanıza, kronik ağrıları yönetmenize ve fiziksel işlevinizi evinizin konforunda iyileştirmenize yardımcı olan yapay zeka destekli bir hizmettir.",
-      cards: [
-        {
-          title: "Yapay Zeka Destekli Hareket Takibi",
-          text: "Uygulama, her egzersizi doğru formda yapmanızı sağlamak için gerçek zamanlı görsel geri bildirim sağlayarak sanal terapistiniz gibi hareket eder.",
-          variant: "dark"
-        },
-        {
-          title: "Adaptif Egzersiz Modifikasyonu",
-          text: "Akıllı yapay zekamız zorlandığınızı anlar. Bir hareket çok zorsa, uygulama anında terapist onaylı daha basit bir alternatif önerir.",
-          variant: "light"
-        },
-        {
-          title: "Kesintisiz ve Otomatik Raporlama",
-          text: "Her tekrar ve seans otomatik olarak kaydedilir. Bu kritik ilerleme verileri gerçek zamanlı olarak doğrudan fizyoterapistinize gönderilir.",
-          variant: "blue"
-        },
-        {
-          title: "Tavizsiz Cihaz İçi Gizlilik",
-          text: "Gizliliğiniz her şeyden önemlidir. Tüm video işleme doğrudan telefonunuzda gerçekleşir; hassas görsel veriler asla sunucuya yüklenmez.",
-          variant: "light"
-        }
-      ]
-    },
-    harness: {
-      title: "Yapay Zeka Destekli Kemer Tespiti",
-      watchVideo: "Videoyu İzle",
-      description: "Civilex.AI tarafından geliştirilen bu sistem, yüksek katlı şantiyelerde gerçek zamanlı iş güvenliği uyumluluğu sağlar.",
-      cards: [
-        {
-          title: "Gerçek Zamanlı Analiz",
-          text: "Sistemimiz, şantiyenizi izleyen bir drone'dan gelen canlı video akışını işler.",
-          variant: "dark"
-        },
-        {
-          title: "Akıllı Tespit",
-          text: "Yapay zeka modeli, işçilerin güvenlik halatlarına ve kemerlerine düzgün şekilde bağlı olup olmadığını ayırt etmek üzere uzmanlaşmıştır.",
-          variant: "light"
-        },
-        {
-          title: "Anlık Uyarılar",
-          text: "Bir işçinin uygun düşme koruması olmadan tespit edildiği anda, görsel kanıtlarla birlikte derhal bir uyarı gönderilir.",
-          variant: "blue"
-        },
-        {
-          title: "Kazaları Olmadan Önleyin",
-          text: "Bu kritik, gerçek zamanlı gözetimi sağlayarak ekibinizin proaktif önlemler almasını ve hayat kurtarmasını sağlıyoruz.",
-          variant: "light"
-        }
-      ]
-    },
+
+    // --- YAYINDAKİ ANA ÜRÜN ---
     atik: {
-      title: "Atik Arena: K-12 Fiziksel Gelişim",
-      description: "Öğrencilerin spor performansını yapay zeka ile analiz eden ve gelişimlerini gerçek zamanlı olarak raporlayan kapsamlı bir ekosistem.",
+      eyebrow: "Ana Ürün · Google Play'de yayında",
+      title: "Atik Arena",
+      tagline: "Kumanda yok. Kahramanı sen oynuyorsun.",
+      description:
+        "6–10 yaş çocuklar için kamerayla oynanan bir hareket oyunu arenası. Çocuk telefonun kamerası önünde hareket eder; cihaz üzerinde çalışan yapay zekâ vücut hareketini anlık olarak okur ve onu oyunun içine alır. Kumanda, dokunmatik ya da ek donanım gerekmez.",
+      facts: [
+        { label: "Yaş grubu", value: "6–10" },
+        { label: "Platform", value: "Android'de yayında · iOS beta" },
+        { label: "Görüntü işleme", value: "%100 cihaz içinde" },
+        { label: "Fiyatlandırma", value: "Ücretsiz başlangıç" }
+      ],
       cards: [
         {
-          title: "Hassas Hareket Takibi",
-          text: "Öğrencilerin egzersiz formları, güvenlik ve verimliliği sağlamak için kamera aracılığıyla anlık olarak analiz edilir.",
+          title: "Kumanda yok, kamera var",
+          text: "Oyun kamerayla oynanır. Cihaz üzerinde çalışan poz tespiti çocuğun vücut hareketini okur ve anında oyuna çevirir. Kumanda, dokunmatik ekran ya da satın alınacak bir aksesuar yok — bir telefon veya tablet yeterli.",
           variant: "dark"
         },
         {
-          title: "Gelişim Raporlaması",
-          text: "Öğretmenler ve veliler için haftalık ve aylık bazda öğrencinin gelişim grafikleri otomatik olarak oluşturulur.",
+          title: "Kamera görüntüsü cihazdan çıkmaz",
+          text: "Tüm görüntü işleme telefonun içinde yapılır. Kamera görüntüsü kaydedilmez, sunucuya gönderilmez, hiçbir yere yüklenmez. Çocuk verisini merkeze alan, veli ve okul için güvenli bir tasarım.",
+          variant: "light"
+        },
+        {
+          title: "Oyunla hareketi birleştirir",
+          text: "Çocuk oyun oynadığını bilir, egzersiz yaptığını fark etmez. Her oyun farklı bir motor beceriyi hedefler: refleks, denge, koordinasyon, tepki süresi ve dayanıklılık.",
           variant: "blue"
         },
         {
-          title: "Cihaz İçi Gizlilik",
-          text: "Tüm analizler doğrudan cihaz üzerinde yapılır; öğrenciler ve eğitim kurumları için maksimum veri gizliliği sağlanır.",
+          title: "Birlikte oynanmak için tasarlandı",
+          text: "\"Şekle Gir\"de iki çocuk aynı kameranın önüne geçer ve duvarı birlikte geçer (co-op). Tek telefon, paylaşılan bir etkinliğe dönüşür — kardeşler, sınıf ve aile için.",
           variant: "light"
+        }
+      ],
+      gamesTitle: "Arenadaki oyunlar",
+      gamesNote:
+        "Her oyun 1, 2 ve 3 yıldızla derecelenen seviyelerden oluşur; toplanan yıldızlar sıradaki oyunun kilidini açar, böylece zorluk çocuğun kendi hızında artar. Her sürümle yeni oyunlar eklenir.",
+      games: [
+        {
+          name: "Hayvanları Kurtar",
+          text: "Ellerini uzat, balonlara dokun ve içindeki hayvanları kurtar. Refleks ve el-göz koordinasyonu."
+        },
+        {
+          name: "Kaleci",
+          text: "Kaleye gelen şutları kurtar. Falsolu toplar tahmin ve tepki süresini çalıştırır."
+        },
+        {
+          name: "Koşucu",
+          text: "Yerinde koş, engellerden kaç, altınları topla. Tempo ve dayanıklılık."
+        },
+        {
+          name: "Şekle Gir",
+          text: "Yaklaşan duvardaki deliğe vücudunla gir. Tek başına ya da iki kişilik co-op olarak oynanır."
+        },
+        {
+          name: "Şeker Patlat",
+          text: "Eşleşen şekerleri hareketlerinle patlat. Hız ve dikkat."
+        },
+        {
+          name: "Salça Zamanı",
+          text: "Düşen domatesleri yakala ve kasayı doldur. Zamana karşı 3B sahne."
+        }
+      ]
+    },
+
+    // --- AR-GE ÇALIŞMALARI (ürün değil, araştırma) ---
+    rnd: {
+      eyebrow: "Ar-Ge",
+      title: "Ar-Ge Çalışmalarımız",
+      description:
+        "Atik Arena'nın arkasındaki cihaz-içi görü motoru bu çalışmaların üzerine kuruldu. Aşağıdaki projeler ticari ürün değil, araştırma ve prototip çalışmalarımızdır.",
+      items: [
+        {
+          category: "Mobil Yapay Zekâ",
+          title: "PilAItes",
+          text: "Kameradan duruşu gerçek zamanlı analiz edip sesli düzeltme veren pilates koçu çalışması — cihaz-içi poz hattımızın ilk test alanı."
+        },
+        {
+          category: "Sağlık Teknolojisi",
+          title: "Fizyoterapi Kliniği",
+          text: "Klinisyen gözetiminde uzaktan egzersiz araştırması: gerçek zamanlı görsel geri bildirimle hareket takibi, uyarlanabilir zorluk ve otomatik seans raporlaması."
+        },
+        {
+          category: "İş Güvenliği Yapay Zekâsı",
+          title: "Emniyet Kemeri Tespiti",
+          text: "Yüksekte çalışan işçilerin emniyet halatlarına bağlı olup olmadığını drone görüntüsünden tespit eden ve güvenlik ekibini görsel kanıtla uyaran bilgisayarlı görü çalışması."
         }
       ]
     }
