@@ -109,8 +109,10 @@ export default function ProjectsPage() {
                 <div className="relative z-10 w-[260px] md:w-[300px]">
                   <div className="relative w-full aspect-[9/19] bg-white rounded-[45px] border-[12px] border-black shadow-2xl overflow-hidden">
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[28px] w-[110px] bg-black rounded-b-[20px] z-20"></div>
+                    {/* Kare dile göre: EN çeviri menü ekranlarında eksik olduğu için
+                        İngilizce tarafta tam çevrilmiş karşılama ekranı kullanılıyor. */}
                     <Image
-                      src="/atik_3.png"
+                      src={lang === "tr" ? "/shot_tr_menu.png" : "/shot_en_welcome.png"}
                       alt={t.atik.tagline}
                       fill
                       className="object-cover"

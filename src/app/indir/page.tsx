@@ -153,8 +153,15 @@ export default function Indir() {
         {/* Ekran görüntüsü */}
         <div className="mt-10 flex flex-col items-center">
           <div className="w-[172px] rounded-[32px] overflow-hidden border-[6px] border-[#1B1A1F] shadow-[0_20px_44px_-16px_rgba(0,0,0,0.45)]">
-            {/* ⚠️ atik_2.png yerine atik_3: eski karede hata ayıklama düğmesi görünüyordu. */}
-            <Image src="/atik_3.png" alt="Atik Arena oyun ekranı" width={1509} height={3353} className="w-full h-auto block" />
+            {/* 2026-08-10: güncel sürümden yeniden çekilen kare. Eski atik_1/2/3
+                kullanılmıyor — bkz. PhoneScreenContent.tsx başındaki not. */}
+            <Image
+              src={lang === "tr" ? "/shot_tr_menu.png" : "/shot_en_welcome.png"}
+              alt="Atik Arena"
+              width={1080}
+              height={2340}
+              className="w-full h-auto block"
+            />
           </div>
           <p className="mt-4 text-xs text-gray-400 max-w-[250px] leading-relaxed">{t.shot}</p>
         </div>

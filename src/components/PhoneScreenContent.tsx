@@ -3,30 +3,49 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 // --- ATİK ARENA EKRAN GÖRÜNTÜLERİ ---
-// Telefon mockup'ında dönen slaytlar. Kare eklemek/değiştirmek için
-// sadece bu listeyi güncelle (dosyalar public/ altında olmalı, telefon oranı ~9:19).
-// ⚠️ atik_2.png (oyun menüsü) 2026-08-10'da listeden ÇIKARILDI: karede sağ üstte
-// hata ayıklama (bug) düğmesi görünüyor, ayrıca oyun adları eski ("Balon Patlatma",
-// "Kaleci Antrenmanı") ve ORTAOKUL sekmesi 6–10 yaş konumlandırmasıyla çelişiyor.
-// Taze kare gelince yenisi konup listeye geri eklenecek.
-const atikSlides = [
-  { src: "/atik_3.png", alt: "Atik Arena – Vücudun kumandan: canlı iskelet takibi" },
-  { src: "/atik_1.png", alt: "Atik Arena – Açılış ekranı" },
-];
+// 2026-08-10: kareler emülatörde uygulamanın GÜNCEL sürümünden yeniden çekildi
+// (Pixel_5, API 37, uygulama dili `cmd locale set-app-locales` ile ayarlandı).
+//
+// 🚨 Eski `atik_1/2/3.png` KULLANMA:
+//   atik_1 → splash'te marka "Atik" yazıyordu, artık "Atik Arena".
+//   atik_2 → karede hata ayıklama düğmesi vardı, oyun adları eskiydi.
+//   atik_3 → o ekran ("Vücudun kumandan" tanıtım turu) uygulamadan KALDIRILDI;
+//            yerine 3 adımlı satır içi eğitim geldi. Var olmayan ekranı gösterme.
+//
+// Diller ayrı: uygulamanın İngilizce çevirisi menü ekranlarında eksik olduğu için
+// (bkz. values-en 508/813 anahtar) İngilizce tarafta yalnızca tam çevrilmiş
+// ekranlar kullanılıyor. Menü karesi çeviri tamamlanınca EN'e de eklenebilir.
+const slidesByLang = {
+  tr: [
+    { src: "/shot_tr_menu.png", alt: "Atik Arena – oyun menüsü" },
+    { src: "/shot_tr_splash.png", alt: "Atik Arena – açılış ekranı" },
+  ],
+  en: [
+    { src: "/shot_en_welcome.png", alt: "Atik Arena – play with your body, never touch your phone" },
+    { src: "/shot_en_splash.png", alt: "Atik Arena – splash screen" },
+  ],
+};
 
 const PhoneScreenContent = () => {
+  const { lang } = useLanguage();
+  const slides = slidesByLang[lang];
   const [internalIndex, setInternalIndex] = useState(0);
 
+  // Dil değişince ilk slayta dön — aksi halde kısa listede indeks taşabilir.
   useEffect(() => {
-    // 1.8 saniyede bir slayt değiştir
+    setInternalIndex(0);
+  }, [lang]);
+
+  useEffect(() => {
     const timer = setInterval(() => {
-      setInternalIndex((prev) => (prev + 1) % atikSlides.length);
-    }, 1800);
+      setInternalIndex((prev) => (prev + 1) % slides.length);
+    }, 2600);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [slides.length]);
 
   return (
     <div className="relative w-full h-full overflow-hidden rounded-[35px] bg-gray-50">
@@ -34,7 +53,7 @@ const PhoneScreenContent = () => {
         className="flex h-full transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${internalIndex * 100}%)` }}
       >
-        {atikSlides.map((slide) => (
+        {slides.map((slide) => (
           <div key={slide.src} className="w-full h-full flex-shrink-0 relative">
             <Image
               src={slide.src}
